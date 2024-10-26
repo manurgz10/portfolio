@@ -1,0 +1,76 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+import Angular from "./icons/Angular.astro";
+import NextJS from "./icons/NextJS.astro";
+import React from "./icons/React.astro";
+import Vue from "./icons/Vue.astro";
+import Laravel from "./icons/Laravel.astro";
+
+const EXPERIENCIE = [
+  {
+    date: "September 2024 - actually",
+    title: "Degree in Computer Engineering",
+    company: "Universitat Oberta de Catalunya (UOC)",
+    functions: [],
+    typeOfContract: "Degree",
+    icons: [],
+    study: true,
+  },
+  {
+    date: "March 2024 - June 2024",
+    title: "Junior Frontend Developer",
+    company: "Habitissimo",
+    functions: [
+      "Working in the frontend team, colaborating in the modernization of the platform in Next.js and React.",
+      "SEO optimization and performance improvements.",
+      "Creating new components and features for the platform.",
+      "SCRUM methodology and daily standups.",
+    ],
+    typeOfContract: "Internship of 3 months",
+    icons: [
+      {
+        name: "Next.js",
+        component: NextJS,
+      },
+      {
+        name: "React",
+        component: React,
+      },
+    ],
+  },
+  {
+    date: "September 2022 - June 2024",
+    title: "CFGS in Web Application Development",
+    company: "CIFP Francesc de Borja Moll",
+    functions: [
+      "Learning the basics of web development.",
+      "Learning about databases (PostgreSQL, MongoDB...) and object-oriented programming.",
+      "Creating web applications with Javascript and PHP.",
+      "Learning about frameworks like Vue.js and Laravel.",
+      "Learning Git, Docker and Agile methodologies.",
+    ],
+    typeOfContract: "FP - Superior Technician",
+    icons: [
+      {
+        name: "Vue.js",
+        component: Vue,
+      },
+      {
+        name: "Laravel",
+        component: Laravel,
+      },
+    ],
+    study: true,
+  },
+];
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>

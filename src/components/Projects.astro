@@ -1,0 +1,83 @@
+---
+import GitHub from "./icons/GitHub.astro"
+import NextJS from "./icons/NextJS.astro"
+import Tailwind from "./icons/Tailwind.astro"
+import Laravel from "./icons/Laravel.astro"
+
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJS,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+  LARAVEL: {
+    name: "Laravel",
+    class: "bg-red-500 text-white",
+    icon: Laravel,
+  }
+}
+const PROJECTS = [
+  {
+    title: "PadelViper - Live the best padel experience",
+    description:
+      "Web application to find padel courts and players. Created with Next.js, Laravel and Tailwind CSS.",
+    link: "",
+    github: "",
+    image: "",
+    tags: [TAGS.NEXT, TAGS.LARAVEL, TAGS.TAILWIND],
+  },
+]
+---
+
+<div class="flex flex-col gap-y-16">
+  {PROJECTS.map(({ image, title, description, tags, link, github }) => (
+  <div
+    class="relative group bg-gray-700 rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
+  >
+    <img
+      src={image}
+      alt={title}
+      class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-300"
+    />
+    <div class="relative z-10 p-8 sm:p-12 backdrop-blur-sm bg-black bg-opacity-30 group-hover:bg-opacity-50 transition-all duration-300">
+      <h3 class="text-2xl text-gray-200 font-bold mb-4">{title}</h3>
+      <p class="text-gray-300 mb-6">{description}</p>
+      <div class="flex flex-wrap gap-2 mb-6">
+        {tags.map((tag, i) => (
+          <span class="bg-gray-800 text-white text-sm font-semibold px-3 py-1 rounded-full">
+            <tag.icon class="w-4 h-4 inline-block mr-1" />
+            {tag.name}
+
+          </span>
+        ))}
+      </div>
+      <div class="flex space-x-6">
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-teal-400 hover:text-teal-600 font-medium transition-colors"
+        >
+          Live Demo
+        </a>
+        <a
+          href={github}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-teal-400 hover:text-teal-600 font-medium transition-colors"
+        >
+          <GitHub class="w-6 h-6 inline-block" />
+        </a>
+      </div>
+    </div>
+  </div>
+))}
+</div>
+
+
+
