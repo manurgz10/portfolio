@@ -9,7 +9,7 @@ Welcome to my portfolio! Here you can explore my projects and skills in web deve
 - **Astro**: A modern static site generator that makes it easy to build fast websites.
 - **React**: A JavaScript library for building efficient user interfaces.
 - **HTML**: For content structure.
-- **CSS**: For design and presentation.
+- **TailwindCSS**: For design and presentation.
 
 
 ## Installation and Usage
