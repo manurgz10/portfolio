@@ -2,7 +2,8 @@
 import GitHub from "./icons/GitHub.astro"
 import NextJS from "./icons/NextJS.astro"
 import Tailwind from "./icons/Tailwind.astro"
-import Laravel from "./icons/Laravel.astro"
+import React from "./icons/React.astro"
+import Docker from "./icons/Docker.astro"
 
 const TAGS = {
   NEXT: {
@@ -15,21 +16,26 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
-  LARAVEL: {
-    name: "Laravel",
-    class: "bg-red-500 text-white",
-    icon: Laravel,
+  REACT: {
+    name: "React",
+    class: "bg-blue-500 text-white",
+    icon: React,
+  },
+  DOCKER: {
+    name: "Docker",
+    class: "bg-blue-500 text-white",
+    icon: Docker
   }
 }
 const PROJECTS = [
   {
-    title: "PadelViper - Live the best padel experience",
+    title: "TAKE&GO - Food Delivery",
     description:
-      "Web application to find padel courts and players. Created with Next.js, Laravel and Tailwind CSS.",
+      "Web application for ordering food online. Users can view different menus, add items to the cart, and place an order. Admins can manage orders status and delete products.",
     link: "",
     github: "",
-    image: "",
-    tags: [TAGS.NEXT, TAGS.LARAVEL, TAGS.TAILWIND],
+    image: "/projects/shot-takego.png",
+    tags: [TAGS.NEXT, TAGS.REACT, TAGS.DOCKER, TAGS.TAILWIND],
   },
 ]
 ---
